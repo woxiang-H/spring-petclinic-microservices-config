@@ -20,10 +20,7 @@ spring:
       allow-override: true
       # Override configuration with any local property source
       override-none: true
-  jpa:
-    open-in-view: false
-    hibernate:
-      ddl-auto: none
+spring.jpa.hibernate.ddl-auto: none
 
 # Spring Boot 1.5 makes actuator secure by default
 management.security.enabled: false
@@ -57,9 +54,7 @@ management:
 # Chaos Engineering
 ---
 spring:
-  config:
-    activate:
-      on-profile: chaos-monkey      
+  profiles: mysql
 management.endpoint.chaosmonkey.enabled: true
 chaos:
   monkey:

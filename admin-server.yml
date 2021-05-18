@@ -3,9 +3,7 @@ server:
 
 ---
 spring:
-  config:
-    activate:
-      on-profile: docker
+  profiles: docker
 eureka:
   client:
     serviceUrl:
